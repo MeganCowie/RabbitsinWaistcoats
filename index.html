@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="This is a personal blog">
+    <meta name="viewport" content = "width-device-width, initial-scale=1">
+    <meta name="author" content = "Megan Cowie">
+    <title>Rabbits in Waistcoats</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce&family=Ephesis&family=Fleur+De+Leah&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <!--- Header ---------------------->
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"></a>
+        <div class="navlinks" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="hodgepodgeandodgebigodge.html">Hodgepodge and Odgebigodge</a></li>
+            <li><a href="unsolicitedcommentary.html">Unsolicited Commentary</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+    <div class="headertextbox">
+      <h1>Rabbits in Waistcoats</h1>
+    </div>
+    </section>
+  </body>
+
+
+<!--- Footer ---------------------->
+<section class="footer">
+  <h4> Footer </h4>
+  <p> Lorem ipsum dolor sit amet. Qui dolores facere aut amet consequatur <br> et maiores consequuntur ab mollitia aspernatur. Qui quis ipsa aut aspernatur voluptatem eum amet <br> quidem voluptas obcaecati est accusamus ratione. </p>
+</section>
+
+
+
+
+<!--- JavaScript for Toggle Menu ---------------------->
+<script>
+
+  var navLinks = document.getElementById("navLinks")
+
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+  function hideMenu(){
+    navLinks.style.right = "-200px";
+  }
+
+</script>
+
+</html>

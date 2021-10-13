@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="This is a personal blog">
+    <meta name="viewport" content = "width-device-width, initial-scale=1">
+    <meta name="author" content = "Megan Cowie">
+    <title>Rabbits in Waistcoats</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce&family=Ephesis&family=Fleur+De+Leah&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <!--- Subheader ---------------------->
+  <body>
+    <section class="subheader">
+      <nav>
+          <a href="index.html" class="navimg"><img src="https://img.icons8.com/external-tulpahn-detailed-outline-tulpahn/64/FFFFFF/external-rabbit-wild-animals-tulpahn-detailed-outline-tulpahn.png"></a>
+        </div>
+        <div class="navlinks" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="hodgepodgeandodgebigodge.html">Hodgepodge and Odgebigodge</a></li>
+            <li><a href="unsolicitedcommentary.html">Unsolicited Commentary</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+    </section>
+  </body>
+
+
+<!--- hpobg ---------------------->
+
+<container class="hpobg-container">
+  <div class="hpobg-containerchild">
+    <div class="hpobg-card">
+        <div class="hpobg-img">
+            <img src="images/Image_Bullseye.jpg">
+        </div>
+        <div class="hpobg-text">
+            <h5> Latex Figures </h5>
+            <p>
+              The little doodles above were made programmatically in Latex. The <a href="https://www.overleaf.com/read/stmymrygfcmf">source code</a> is available in Overleaf. I'm pretty new to these, but it's kind of fun to break down a figure into lines, rectangles, circles, and coordinates. I made the bullseye doodle on this card for a first year physics lab I wrote exploring uncertainties (and distinguishing between "accuracy" and "precision").
+              *`Last edit: 2021/03/03`*
+            </p>
+        </div>
+    </div>
+    <div class="hpobg-card">
+        <div class="hpobg-img">
+            <img src="images/Image_Book.jpg">
+        </div>
+        <div class="hpobg-text">
+            <h5> Book Reviews </h5>
+            <p>
+              <a href="https://www.goodreads.com/review/show/3517035914?book_show_action=false&from_review_page=1">God is not Great</a><br>
+              <a href="https://www.goodreads.com/review/show/3589309151?book_show_action=false&from_review_page=1">The Righteous Mind</a><br>
+              <a href="https://www.goodreads.com/review/show/3585612099?book_show_action=false&from_review_page=1">How to be an Antiracist</a><br>
+              <a href="https://www.goodreads.com/review/show/3669732761?book_show_action=false&from_review_page=1">The End of Gender</a><br>
+              *`Last edit: 2021/03/01`*
+           </p>
+        </div>
+    </div>
+    <div class="hpobg-card">
+        <div class="hpobg-img">
+            <img src="images/Image_Piano.jpg">
+        </div>
+        <div class="hpobg-text">
+            <h5> Learning Fantasie Impromptu </h5>
+            <p>
+              In 2020 I put 100 hours into Chopin's Fantasie Impromptu. It's still riddled with things that need to be improved/fixed, but my 100-hour progress mark is at 19:15 in <a href="https://youtu.be/Q-evSwYTZuc?t=1155">this video</a>. This video was a Christmas gift to my parents. The song is so gorgeous I couldn't help giving it a try.
+              *`Last edit: 2021/01/01`*
+            </p>
+        </div>
+    </div>
+    <div class="hpobg-card">
+        <div class="hpobg-img">
+            <img src="images/Image_ScatterPlot.jpg">
+        </div>
+        <div class="hpobg-text">
+            <h5> The Spread of Covid 19 </h5>
+            <p>
+              In April 2020 I wrote a program to visualize the spread of COVID 19. I wrote this in Matlab, which ultimately meant that I had to post static videos, rather than allowing users to vary parameters and play with the model themselves. (This was the catalyst for me learning Dash.) It's still not user-friendly, and I dropped it before comparing to real-world scenarios, but perhaps <a href="https://sites.google.com/view/rabbitsinwaistcoats?fbclid=IwAR0ulkGCaclXDWQQXV598BVHar7iraC01ekaINjLztkfq1TMfzbGys3I7pM">the website</a> is interesting to peruse nonetheless.
+              *`Last edit: 2020/04/08`*
+            </p>
+        </div>
+    </div>
+    <div class="hpobg-card">
+        <div class="hpobg-img">
+            <img src="images/Image_Bullseye.jpg">
+        </div>
+        <div class="hpobg-text">
+            <h5> Card 1 Title </h5>
+            <p>
+                Haec subinde Constantius audiens et quaedam referente .
+            </p>
+        </div>
+    </div>
+  </div>
+</container>
+
+
+
+
+
+<!--- JavaScript for Toggle Menu ---------------------->
+<script>
+
+  var navLinks = document.getElementById("navLinks")
+
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+  function hideMenu(){
+    navLinks.style.right = "-200px";
+  }
+
+</script>
+
+</html>
