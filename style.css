@@ -1,47 +1,83 @@
+
+/*-----------------------------GENERAL FORMATTING-----------------------------*/
+
 *{
     margin: 0;
     padding:0;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
-/*------- Links ----- */
-a:link {
-  color: #1f77b4;
-  background-color: transparent;
-  text-decoration: underline;
+/*----- Text ----- */
+body{
+  background: #ffffff;
 }
-a:visited {
-  color: #224e6d;
-  background-color: transparent;
-  text-decoration: underline;
+h1{
+  font-size: 36px;
+  font-weight: 600;
 }
-a:hover {
-  color: #9467bd;
-  background-color: transparent;
-  text-decoration: underline;
-  font-weight: bold;
+h2{
+  font-size: 25px;
+  font-weight: 400;
+  padding: 15px;
+}
+h3{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 25px;
+  text-align: left;
+  font-size: 11px;
+  color: #888888;
+}
+span{
+  margin-top: -10px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+hr{
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+p{
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
 }
 
-
-/*------- Button ----- */
-.hero-btn{
+/*----- Button ----- */
+.button{
   display: inline-block;
   text-decoration: none;
-  color: #777;
   border: 1px solid #777;
   padding: 12px 34px;
   font-size: 13px;
-  background: transparent;
+  background: #c4c4c4;
   position: relative;
   cursor: pointer;
+  border-radius: 5px;
 }
-.hero-btn:hover{
-  border: 1px solid #f44336;
-  background: #f44336;
+.button:hover{
+  border: 2px solid #777;
+  background: #6f518a;
   transition: 1s;
 }
+b:link {
+  color: #cab3de;
+  background-color: transparent;
+  text-decoration: underline;
+}
+b:hover {
+  color: #ffffff;
+  background-color: transparent;
+  text-decoration: underline;
+}
 
-/*------- Navigation Links ----- */
+
+/*----- Navigation Links ----- */
 .navlinks{
   flex: 1;
   text-align: right;
@@ -76,6 +112,9 @@ nav{
   justify-content: space-between;
   align-items: center;
 }
+nav .fa{
+  display: none;
+}
 .navimg img{
   width: 50px;
   transform: scaleX(-1);
@@ -83,9 +122,6 @@ nav{
 .navimg:hover img{
   transform: scaleX(1);
   transition: 0.5s;
-}
-nav .fa{
-  display: none;
 }
 
 @media(max-width: 700px){
@@ -102,6 +138,9 @@ nav .fa{
     text-align: left;
     z-index: 2;
   }
+  .navlinks ul{
+    padding: 30px;
+  }
   nav .fa{
     display: block;
     color: #fff;
@@ -109,16 +148,32 @@ nav .fa{
     font-size: 22px;
     cursor: pointer;
   }
-  .navlinks ul{
-    padding: 30px;
-  }
 }
 
-/*------- Header ----- */
+/*----- Text Links ----- */
+a:link {
+  color: #1f77b4;
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: bold;
+}
+a:visited {
+  color: #224e6d;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:hover {
+  color: #9467bd;
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/*----- Header ----- */
 .header {
   min-height: 70vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/RichieCropShort.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/RichieCrop.jpg);
   background-position: bottom;
   background-size: cover;
   position: relative;
@@ -152,11 +207,11 @@ nav .fa{
   }
 }
 
-/*------- Subheader ----- */
+/*----- Subheader ----- */
 .subheader {
   min-height: 20vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/RichieCropShort.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/RichieCrop.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -190,94 +245,150 @@ nav .fa{
   }
 }
 
-/*------- hpobg ----- */
-body{
-  background: #cecece;
+/*----- Footer ----- */
+.footer {
+  min-height: 40vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/RichieDaisyCrop.jpg);
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
 }
-h1{
-  font-size: 36px;
-  font-weight: 600;
-}
-p{
-  color: #777;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 22px;
-  padding: 10px;
-}
-h3{
-  margin-top: 16px;
-  margin-bottom: 15px;
+.footertextbox{
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   text-align: center;
 }
-h5{
-  margin-top: -15px;
-  font-size: 20px;
+.footertextbox h1{
+  font-size: 50px;
+  font-weight: normal;
+  font-family: 'Fleur De Leah', cursive;
 }
-hr{
-  border: 0;
-  height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.hpobg-container{
-  max-width: 100%;
-}
-.hpobg-containerchild{
-  max-width: 100%;
-  padding: 5%;
-}
-.hpobg-card{
-    transition: .75s;
-    background: white;
-    border-radius: 5px;
-    float: left;
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-top: 0%;
-    margin-bottom: 1%;
-    width: 23%;
-    height: auto;
-}
-.hpobg-card:hover{
-  z-index: 10 !important;
-  transform: scale(1.05);
-  box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
-}
-.hpobg-text{
-  padding: 2%;
-}
-.hpobg-img img{
-  width: 100%;
-  height: auto;
-  padding-bottom: 20px;
+.footertextbox p{
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
 }
 
 @media(max-width: 700px){
-  .hpobg-containerchild{
-    padding:auto;
+  .footertextbox h1{
+    font-size: 80px
   }
-  .hpobg-card {
-    width: auto;
+  .footer {
+    min-height: 10vh;
   }
 }
 
-/*------- Footer ----- */
-.footer{
+/*------------------------ HODGEPODGE AND ODGEBIGODGE ------------------------*/
+
+.cards-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5rem;
+  padding: 4rem;
+  margin: 0 auto;
+  width: max-content;
+}
+.card {
+  height: 21em;
+  width: 16em;
+  font-size: 1.5em;
+  color: white;
+  border-radius:10px;
+  padding: 1em;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 0 20px -10px black;
+  transition: all, 1s;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid #ffffff;
+  text-decoration: none;
+}
+.card-content{
+  backface-visibility: hidden;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  display: block;
+  padding: 8px;
+}
+.card-before {
+  height: 100%;
   width: 100%;
+  background: red;
+  position: absolute;
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)), var(--bg-img);
+  background-size: cover;
+  background-position: center;
+}
+.card-before h2{
+  position: absolute;
+  bottom: 0;
+  color: white;
+}
+.card-after {
+  position: absolute;
+  top: -140%;
+  left:-140%;
+  height : 140%;
+  width : 140%;
+  padding: 8px;
+  background: white;
+  font-size: 12px;
+}
+.card-after img{
   text-align: center;
-  padding: 30px 0;
+  width: 70%;
+  height: auto;
 }
-.footer h4{
-  margin-bottom: 25px;
-  margin-top: 20px;
-  font-weight: 600;
+.card-after h2{
+  color: #929292;
+  width : 70%;
+  margin-top: -15px;
+  margin-bottom: -15px;
+}
+.card-after p{
+  color: #929292;
+  width : 70%;
+}
+.card-after h5{
+  position: absolute;
+  bottom: 30%;
+  color: #929292;
+  width : 70%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 15px;
+}
+.card:hover .card-after {
+  top: 0%;
+  left: 0%;
+  width: 140%;
+  height: 140%;
+  border-radius: 0% 0% 80% 0%;
+  opacity: 1;
+  transition: 2s;
+}
+.card:not(hover) .card-after {
+  top: -100%;
+  left:-100%;
+  width: 140%;
+  height: 140%;
+  height: 0;
+  opacity: 0;
+  transition: 1s;
 }
 
-
-
-/*------- Resources! -----
+/*-------------------------------- RESOURCES ---------------------------------*/
+/*
 Fonts: https://fonts.google.com/
 Icons: https://fontawesome.com/v4.7/icons/
 Placeholder images: https://placeholder.com/
