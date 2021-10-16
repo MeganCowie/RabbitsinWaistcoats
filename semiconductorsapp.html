@@ -19,8 +19,7 @@
   <body>
     <section class="subheader">
       <nav>
-          <a href="index.html" class="navimg"><img src="https://img.icons8.com/external-tulpahn-detailed-outline-tulpahn/64/FFFFFF/external-rabbit-wild-animals-tulpahn-detailed-outline-tulpahn.png"></a>
-        </div>
+        <a href="index.html" class="navimg"><img src="https://img.icons8.com/external-tulpahn-detailed-outline-tulpahn/64/FFFFFF/external-rabbit-wild-animals-tulpahn-detailed-outline-tulpahn.png"></a>
         <div class="navlinks" id="navLinks">
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
@@ -35,28 +34,27 @@
 
 
   <!--- Semiconductors App ---------------------->
-  <section>
-    <h4> Webpage under construction </h4>
-  </section>
 
+</section>
+    <span> Page under construction </span>
+</section>
 
 
   <!--- Footer ---------------------->
   <body>
-    <section class="subheader">
-      <nav>
-          <a href="index.html" class="navimg"><img src="https://img.icons8.com/external-tulpahn-detailed-outline-tulpahn/64/FFFFFF/external-rabbit-wild-animals-tulpahn-detailed-outline-tulpahn.png"></a>
-        </div>
-        <div class="navlinks" id="navLinks">
-          <i class="fa fa-times" onclick="hideMenu()"></i>
-          <ul>
-            <li><a href="hodgepodgeandodgebigodge.html">Hodgepodge and Odgebigodge</a></li>
-            <li><a href="semiconductorsapp.html">Semiconductors App</a></li>
-          </ul>
-        </div>
-        <i class="fa fa-bars" onclick="showMenu()"></i>
-      </nav>
+    <section class="footer">
     </section>
   </body>
+  
+  <!--- JavaScript for Toggle Menu ---------------------->
+  <script>
+    var navLinks = document.getElementById("navLinks")
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+    function hideMenu(){
+      navLinks.style.right = "-200px";
+    }
+  </script>
 
  </html>
