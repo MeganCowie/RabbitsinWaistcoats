@@ -19,14 +19,15 @@ h1{
 h2{
   font-size: 25px;
   font-weight: 400;
+  padding: 15px;
 }
 h3{
-  font-size: 16px;
-  font-weight: 300;
-}
-h4{
-  font-size: 14px;
-  font-weight: 200;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 25px;
+  text-align: left;
+  font-size: 11px;
+  color: #888888;
 }
 span{
   font-size: 20px;
@@ -46,6 +47,7 @@ p{
   font-size: 14px;
   font-weight: 300;
   line-height: 22px;
+  padding: 10px;
 }
 
 /*----- Button ----- */
@@ -159,7 +161,7 @@ a:link {
   color: #1f77b4;
   background-color: transparent;
   text-decoration: underline;
-  font-weight: none;
+  font-weight: bold;
 }
 a:visited {
   color: #224e6d;
@@ -198,8 +200,8 @@ a:hover {
 }
 .headertextbox p{
   margin: 10px 0 40px;
+  font-size: 14px;
   color: #fff;
-  padding: 10px;
 }
 
 @media(max-width: 700px){
@@ -213,10 +215,10 @@ a:hover {
 
 /*----- Subheader ----- */
 .subheader {
-  min-height: 60vh;
+  min-height: 20vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/RichieCropShort.jpg);
-  background-position: bottom;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/RichieCrop.jpg);
+  background-position: center;
   background-size: cover;
   position: relative;
 }
@@ -229,8 +231,21 @@ a:hover {
   transform: translate(-50%,-50%);
   text-align: center;
 }
+.subheadertextbox h1{
+  font-size: 50px;
+  font-weight: normal;
+  font-family: 'Fleur De Leah', cursive;
+}
+.subheadertextbox p{
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
+}
 
 @media(max-width: 700px){
+  .subheadertextbox h1{
+    font-size: 80px
+  }
   .subheader {
     min-height: 10vh;
   }
@@ -238,13 +253,12 @@ a:hover {
 
 /*----- Footer ----- */
 .footer {
-  min-height: 70vh;
+  min-height: 40vh;
   width: 100%;
   background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/RichieDaisyCrop.jpg);
   background-position: bottom;
   background-size: cover;
   position: relative;
-  z-index: -1;
 }
 .footertextbox{
   width: 90%;
@@ -257,152 +271,32 @@ a:hover {
 }
 @media(max-width: 700px){
   .footer {
-    min-height: 25vh;
+    min-height: 10vh;
   }
 }
 
 /*------------------------ HODGEPODGE AND ODGEBIGODGE ------------------------*/
 
-/*------------------------ hpobg title ------------------------*/
-
-.hpobg-title{
-  display: block;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0 auto;
-  margin-top: -20vh;
-  width: 90%;
-  height: 22rem;
-  position: relative;
-  box-shadow: 0 0 50px -10px black;
-}
-.svg-background{
-  position: absolute;
-  width:100%;
-}
-.hpobg-title-cards-wrapper {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0rem;
-  padding: 0rem;
-  margin: 0;
-  width: 100%;
-  position: absolute;
-}
-.hpobg-title-card {
-  height: 22rem;
-  width: 150%;
-  padding: 0;
-  margin: auto;
-  display: grid;
-  position: relative;
-  overflow: hidden;
-  vertical-align: middle;
-}
-.hpobg-defs-card {
-  height: 22rem;
-  width: 50%;
-  margin: 0 auto;
-  margin-left: 50%;
-  font-size: 1.5em;
-  color: #e6e6e6;
-  padding: 1em;
-  display: inline-block;
-  vertical-align: middle;
-  align-items: left;
-  position: relative;
-  overflow: hidden;
-  background-color: #224e6d;
-}
-.hpobg-title-textbox{
-  position: absolute;
-  margin: 0 auto;
-  bottom: 30px;
-}
-.hpobg-title-textbox h3{
-  color: #fff;
-  padding: 15px;
-  font-size: 60px;
-  text-align: center;
-}
-.hpobg-defs-card h2{
-  font-size: 20px;
-}
-.hpobg-defs-card p{
-  color: #d1d1d1;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-@media(max-width: 700px){
-  .hpobg-title{
-    margin-top: 0vh;
-    width: 100vw;
-    height: 72vh;
-    position: relative;
-    display: inline-block;
-  }
-  .hpobg-title-cards-wrapper {
-    grid-template-columns: 1fr;
-    height: 10em;
-    width: 100vw;
-    }
-  .hpobg-title-card {
-    height: 10em;
-    width: 100vw;
-    margin-left: 0;
-    vertical-align: middle;
-  }
-  .hpobg-title-textbox h3{
-    font-size: 30px;
-  }
-  .hpobg-defs-card {
-    height: 62vh;
-    width: 100vw;
-    margin-left: 0;
-    display: inline-block;
-  }
-  .hpobg-defs-card h2{
-    font-size: 16px;
-  }
-  .hpobg-defs-card p{
-    font-size: 11px;
-  }
-  .hpobg-defs-card h3{
-    font-size: 14px;
-  }
-}
-
-
-
-/*------------------------ hpobg cards ------------------------*/
 .cards-wrapper {
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 4rem;
-  padding: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  background-color: #224e6d00;
+  grid-gap: 5rem;
+  padding: 4rem;
+  margin: 0 auto;
+  width: max-content;
 }
 .card {
   height: 21em;
-  width: 100%;
+  width: 16em;
   font-size: 1.5em;
   color: white;
   border-radius:10px;
   padding: 1em;
   display: flex;
   align-items: flex-end;
-  box-shadow: 0 0 10px -5px black;
+  box-shadow: 0 0 20px -10px black;
   transition: all, 1s;
   position: relative;
   overflow: hidden;
@@ -421,7 +315,7 @@ a:hover {
 .card-before {
   height: 100%;
   width: 100%;
-  background: #777;
+  background: red;
   position: absolute;
   background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)), var(--bg-img);
   background-size: cover;
@@ -431,7 +325,6 @@ a:hover {
   position: absolute;
   bottom: 0;
   color: white;
-  padding: 15px;
 }
 .card-after {
   position: absolute;
@@ -444,18 +337,19 @@ a:hover {
   font-size: 12px;
 }
 .card-after img{
+  text-align: center;
   width: 70%;
   height: auto;
 }
 .card-after h2{
   color: #929292;
   width : 70%;
-  margin-left: 15px;
+  margin-top: -15px;
+  margin-bottom: -15px;
 }
 .card-after p{
   color: #929292;
   width : 70%;
-  padding: 10px;
 }
 .card-after h5{
   position: absolute;
@@ -488,32 +382,20 @@ a:hover {
 
 @media(max-width: 700px){
   .cards-wrapper {
-    grid-template-columns: 1fr;
-    padding: 5vw;
-    grid-gap: 10vw;
+      grid-template-columns: 1fr;
+      padding: 5vw;
+    }
+    .info {
+      justify-content: center;
+    }
+    .card-grid-space .num {
+      /margin-left: 0;
+      /text-align: center;
+    }
+    .card {
+      max-width: 90vw;
+    }
   }
-  .card-grid-space .num {
-    text-align: center;
-  }
-  .card {
-    height: 120vw;
-    padding: 0;
-  }
-  .card-content{
-    padding: 2px;
-  }
-  .card-after img{
-    width: 70%;
-  }
-  .card-after h2{
-    font-size: 18px;
-  }
-  .card-after p{
-    font-size: 12px;
-    line-height: 18px;
-    width: 70%;
-  }
-}
 
 
 /*-------------------------------- RESOURCES ---------------------------------*/
@@ -521,5 +403,4 @@ a:hover {
 Fonts: https://fonts.google.com/
 Icons: https://fontawesome.com/v4.7/icons/
 Placeholder images: https://placeholder.com/
-Background SVG: https://www.svgbackgrounds.com/
 */
