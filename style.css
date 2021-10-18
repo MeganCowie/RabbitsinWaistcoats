@@ -115,11 +115,11 @@ nav{
 nav .fa{
   display: none;
 }
-.navimg img{
+.navimg svg{
   width: 50px;
   transform: scaleX(-1);
 }
-.navimg:hover img{
+.navimg:hover svg{
   transform: scaleX(1);
   transition: 0.5s;
 }
@@ -149,8 +149,9 @@ nav .fa{
     font-size: 22px;
     cursor: pointer;
   }
-  .navimg img{
-    width: 40px;
+  .navimg svg{
+    width:30px;
+    height:30px;
   }
 }
 
@@ -201,6 +202,9 @@ a:hover {
   color: #fff;
   padding: 10px;
 }
+.header .navimg:hover svg{
+  transform: scaleX(-1);
+}
 
 @media(max-width: 700px){
   .headertextbox h1{
@@ -244,21 +248,36 @@ a:hover {
   background-position: bottom;
   background-size: cover;
   position: relative;
-  z-index: -1;
 }
-.footertextbox{
-  width: 90%;
-  color: #fff;
+.footer-links{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  right: 0;
+  padding: 50px;
+}
+.footer-cprt{
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  padding: 10px;
 }
 @media(max-width: 700px){
   .footer {
     min-height: 25vh;
   }
+  .footer-links{
+    padding: 10px;
+  }
+  .footer-cprt p{
+    font-size: 13px;
+  }
+  .footer svg{
+   width:30px;
+   height:30px;
+ }
 }
 
 
@@ -530,6 +549,7 @@ a:hover {
 /*
 Fonts: https://fonts.google.com/
 Icons: https://fontawesome.com/v4.7/icons/
+Icons: https://icons8.com/
 Placeholder images: https://placeholder.com/
 Background SVG: https://www.svgbackgrounds.com/
 */

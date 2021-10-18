@@ -13,12 +13,12 @@ I need to figure out some way to query the text length and adjust the card lengt
 
 ### Footer
 Footer content ideas:
-- Github
-- pompomswithears
-- google scholar
 - contact?
 - side hussles
 
 
 ### Organization
-Figure out how to get header & footer on every page without copy/pasting code. 
+Figure out how to get header & footer on every page without copy/pasting code.
+Static site generator?
+SPA - single page application (javascript)
+Mustache template system
