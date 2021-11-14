@@ -1,7 +1,6 @@
 # To Do
 
 ### Pages
-hpobg intro
 Semiconductors page
 Home page
 
@@ -10,11 +9,6 @@ I don't really like the fact that the navigation menu needs javascript. Try to r
 
 ### Fix hpobg card lengths
 I need to figure out some way to query the text length and adjust the card lengths accordingly.
-
-### Footer
-Footer content ideas:
-- contact?
-- side hussles
 
 
 ### Organization

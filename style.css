@@ -401,7 +401,7 @@ a:hover {
 
 
 
-/*------------------------ HODGEPODGE AND ODGEBIGODGE ------------------------*/
+/*------------------------ CARDS ------------------------*/
 .cards-wrapper {
   display: grid;
   justify-content: center;
@@ -544,6 +544,20 @@ a:hover {
   }
 }
 
+/*------------------------ IFRAME ------------------------*/
+.iframe-content{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #224e6d00;
+  width:90%;
+}
+iframe{
+  border: none;
+}
 
 /*-------------------------------- RESOURCES ---------------------------------*/
 /*
