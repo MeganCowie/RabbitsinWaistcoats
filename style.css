@@ -76,13 +76,39 @@ b:hover {
   text-decoration: underline;
 }
 
+/*----- Text Links ----- */
+a:link {
+  color: #1f77b4;
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: none;
+}
+a:visited {
+  color: #224e6d;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:hover {
+  color: #9467bd;
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 
 /*----- Navigation Links ----- */
-.navlinks{
-  flex: 1;
-  text-align: right;
-  transition: 1s;
+/*--- For large screen sizes, the manu simply is text links at the top of the
+header. But for small screen widths, a navigation pane slides horizontally when
+the user clicks the navlinks icon.---*/
+
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
 }
+
+/*--- Draws a purple underline on hover.---*/
 .navlinks ul li{
   list-style: none;
   display: inline-block;
@@ -106,72 +132,67 @@ b:hover {
 .navlinks ul li:hover::after{
   width: 100%;
 }
-nav{
-  display: flex;
-  padding: 2% 6%;
-  justify-content: space-between;
-  align-items: center;
-}
-nav .fa{
-  display: none;
-}
+/*--- Displays menu on click (small screens only).---*/
+nav input{display:none}
+nav label{display:none}
+
+
+/*--- Flips the icon on hover.---*/
 .navimg svg{
   width: 50px;
   transform: scaleX(-1);
 }
 .navimg:hover svg{
-  transform: scaleX(1);
+  transforms: scaleX(1);
   transition: 0.5s;
 }
 
 @media(max-width: 700px){
-  .navlinks ul li{
+  .togglemenu{
     display: block;
+    position: relative;
+    z-index: 1;
   }
-  .navlinks{
-    position: absolute;
+  nav input {
+    display: none;
+  }
+  .navlinks {
+    visibility:none;
     background: #a45c8e;
-    height: 100vh;
+    position: absolute;
     width: 200px;
-    top: 0;
-    right: -200px;
-    text-align: left;
-    z-index: 2;
-    display: hidden;
-  }
-  .navlinks ul{
-    padding: 30px;
-  }
-  nav .fa{
-    display: block;
-    color: #fff;
-    margin: 10px;
-    font-size: 22px;
-    cursor: pointer;
-  }
+    height:120vh;
+    right:-250px;
+    margin: -20vh 0 0 -10vh;
+    padding: 30px 10px 50px 10px;  }
+  nav input ~ .navlinks{
+    visibility:none;
+    right:-250px;
+    transition-property: right, visibility;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    }
+  nav input:checked ~ .navlinks{
+    visibility:visible;
+    right:-30px;
+    transition-property: right, visibility;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    }
+  nav label {
+   color: white;
+   background:  none;
+   font-style: normal;
+   font-size: 1.2em;
+   padding: 10px;
+   display: block;
+   margin: 10px;
+   font-size: 22px;
+   }
   .navimg svg{
     width:30px;
     height:30px;
   }
-}
-
-/*----- Text Links ----- */
-a:link {
-  color: #1f77b4;
-  background-color: transparent;
-  text-decoration: underline;
-  font-weight: none;
-}
-a:visited {
-  color: #224e6d;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:hover {
-  color: #9467bd;
-  background-color: transparent;
-  text-decoration: underline;
-  font-weight: bold;
 }
 
 /*----- Header ----- */
@@ -182,6 +203,7 @@ a:hover {
   background-position: bottom;
   background-size: cover;
   position: relative;
+  overflow-x: clip;
 }
 .headertextbox{
   width: 90%;
@@ -207,11 +229,11 @@ a:hover {
 }
 
 @media(max-width: 700px){
-  .headertextbox h1{
-    font-size: 70px
-  }
   .header {
     min-height: 50vh;
+  }
+  .headertextbox h1{
+    font-size: 70px;
   }
 }
 
@@ -223,6 +245,7 @@ a:hover {
   background-position: bottom;
   background-size: cover;
   position: relative;
+  overflow-x: clip;
 }
 .subheadertextbox{
   width: 90%;
@@ -242,7 +265,7 @@ a:hover {
 
 /*----- Footer ----- */
 .footer {
-  min-height: 70vh;
+  min-height: 50vh;
   width: 100%;
   background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/RichieDaisyCrop.jpg);
   background-position: bottom;
@@ -266,7 +289,22 @@ a:hover {
 }
 @media(max-width: 700px){
   .footer {
-    min-height: 25vh;
+    min-height: 30vh;
+  }
+  .footer-links{
+    padding: 10px;
+  }
+  .footer-cprt p{
+    font-size: 13px;
+  }
+  .footer svg{
+   width:30px;
+   height:30px;
+ }
+}
+@media(max-width: 700px){
+  .footer {
+    min-height: 30vh;
   }
   .footer-links{
     padding: 10px;
@@ -289,6 +327,7 @@ a:hover {
   padding: 0;
   margin: 0 auto;
   margin-top: -20vh;
+  margin-bottom: 10vh;
   width: 90%;
   height: 22rem;
   position: relative;
@@ -356,13 +395,14 @@ a:hover {
 
 @media(min-width: 1600px){
   .pageheader {
-    width: 70%;
+    width: 60%;
   }
 }
 
 @media(max-width: 700px){
   .pageheader{
     margin-top: 0vh;
+    margin-bottom: 20vh;
     width: 100vw;
     height: 72vh;
     position: relative;
@@ -372,7 +412,7 @@ a:hover {
     grid-template-columns: 1fr;
     height: 10em;
     width: 100vw;
-    }
+  }
   .pageheader-title-card {
     height: 10em;
     width: 100vw;
@@ -402,6 +442,15 @@ a:hover {
 
 
 /*------------------------ CARDS ------------------------*/
+/*--- Firstly, the cards are arranged in the grid defined in "cards-wrapper".
+Each card takes up the box defined in "card", and the content box within each
+card is defined by "card-content". There are two possible options for content:
+" card-before" and "card-after", and their position within "card-content" is
+defined by whether the user hovers over the card or not. When the user is not
+hovered,  card-before is within the card margins, and the position of card-after
+is set outside the card margins (top left). When the user is hovered,
+crd-before remains within the card margins, but card-after follows a set
+trajectory into the card margins, covering the card-before content.---*/
 .cards-wrapper {
   display: grid;
   justify-content: center;
@@ -511,7 +560,7 @@ a:hover {
 
 @media(min-width: 1600px){
   .cards-wrapper {
-    width: 70%;
+    width: 60%;
   }
 }
 
@@ -545,20 +594,23 @@ a:hover {
 }
 
 /*------------------------ IFRAME ------------------------*/
-.iframe-content{
+.iframe-wrapper {
   display: block;
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
+  width: 75%;
   background-color: #224e6d00;
-  width:90%;
 }
 iframe{
   border: none;
+  height: 2000px;
+  width:100%;
 }
-
 /*-------------------------------- RESOURCES ---------------------------------*/
 /*
 Fonts: https://fonts.google.com/
