@@ -65,31 +65,21 @@ p{
   background: #6f518a;
   transition: 1s;
 }
-b:link {
-  color: #cab3de;
-  background-color: transparent;
-  text-decoration: underline;
-}
-b:hover {
-  color: #ffffff;
-  background-color: transparent;
-  text-decoration: underline;
-}
 
 /*----- Text Links ----- */
 a:link {
-  color: #1f77b4;
+  color: #ffffff;
   background-color: transparent;
   text-decoration: underline;
   font-weight: none;
 }
 a:visited {
-  color: #224e6d;
+  color: #ffffff;
   background-color: transparent;
   text-decoration: underline;
 }
 a:hover {
-  color: #9467bd;
+  color: #ffffff;
   background-color: transparent;
   text-decoration: underline;
   font-weight: bold;
@@ -118,7 +108,7 @@ nav{
 .navlinks ul li a{
   color: #fff;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
 }
 .navlinks ul li::after{
   content: '';
@@ -136,14 +126,13 @@ nav{
 nav input{display:none}
 nav label{display:none}
 
-
 /*--- Flips the icon on hover.---*/
 .navimg svg{
   width: 50px;
   transform: scaleX(-1);
 }
 .navimg:hover svg{
-  transforms: scaleX(1);
+  transform: scaleX(1);
   transition: 0.5s;
 }
 
@@ -159,12 +148,13 @@ nav label{display:none}
   .navlinks {
     visibility:none;
     background: #a45c8e;
-    position: absolute;
-    width: 200px;
-    height:120vh;
+    position: fixed;
+    top: 0px;
+    width: 210px;
+    height:100vh;
     right:-250px;
-    margin: -20vh 0 0 -10vh;
-    padding: 30px 10px 50px 10px;  }
+    margin: 0 0 0 -10vh;
+    padding: 10px 10px 10px 10px;  }
   nav input ~ .navlinks{
     visibility:none;
     right:-250px;
@@ -342,15 +332,15 @@ nav label{display:none}
   justify-content: center;
   align-items: center;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 0rem;
-  padding: 0rem;
+  grid-gap: 0;
+  padding: 0;
   margin: 0;
   width: 100%;
   position: absolute;
 }
 .pageheader-title-card {
   height: 22rem;
-  width: 150%;
+  width: 100%;
   padding: 0;
   margin: auto;
   display: grid;
@@ -360,9 +350,9 @@ nav label{display:none}
 }
 .pageheader-details-card {
   height: 22rem;
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
-  margin-left: 50%;
+  margin-left: 30%;
   font-size: 1.5em;
   color: #e6e6e6;
   padding: 1em;
@@ -375,6 +365,7 @@ nav label{display:none}
 }
 .pageheader-title-txbx{
   position: absolute;
+  width:100%;
   margin: 0 auto;
   bottom: 30px;
 }
@@ -395,7 +386,7 @@ nav label{display:none}
 
 @media(min-width: 1600px){
   .pageheader {
-    width: 60%;
+    width: 70%;
   }
 }
 
@@ -438,7 +429,6 @@ nav label{display:none}
     font-size: 14px;
   }
 }
-
 
 
 /*------------------------ CARDS ------------------------*/
@@ -560,7 +550,7 @@ trajectory into the card margins, covering the card-before content.---*/
 
 @media(min-width: 1600px){
   .cards-wrapper {
-    width: 60%;
+    width: 70%;
   }
 }
 
@@ -603,7 +593,7 @@ trajectory into the card margins, covering the card-before content.---*/
   margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 100%;
   background-color: #224e6d00;
 }
 iframe{
