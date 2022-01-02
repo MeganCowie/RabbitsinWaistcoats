@@ -36,7 +36,7 @@
             <ul>
               <li><a href="hodgepodgeandodgebigodge.html">Hodgepodge and Odgebigodge</a></li>
               <li><a href="semiconductorsapp.html">Semiconductors App</a></li>
-              <li><a href="physicswidgets.html">Physics Widgets</a></li>
+              <li><a href="aquariumproject.html">Aquarium Project</a></li>
             </ul>
           </div>
         </div>
@@ -82,23 +82,25 @@
 
   <!--- Semiconductors App ---------------------->
 
-  <head>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script>
-          $(document).ready(function () {
-               window.addEventListener("message", (event) => {
-                  let iframe = document.querySelector('#my-iframe');
-                  iframe.height = event.data.height;
-              });
-          });
-      </script>
-  </head>
-  <body>
-      <section  class="iframe-wrapper">
-        <iframe id="my-iframe" width="100%" height="100%" src="https://semiconductorsapp.desktop.antrg.com/" frameborder="1"></iframe>
-      </section>
-  </body>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+             window.addEventListener("message", (event) => {
+                let iframe = document.querySelector('#my-iframe');
+                iframe.height = event.data.height;
+            });
+        });
+    </script>
 </head>
+
+<section  class="iframe-wrapper-title">
+  <h4>Semiconductor applet and explanations are not available on mobile... sorry. Maybe one day, but for now it's just too much work to make everything responsive. You can see it on a laptop or monitor, though!</h4>
+</section>
+
+<section  class="iframe-wrapper">
+  <iframe id="my-iframe" width="100%" height="100%" src="http://127.0.0.1:8050/" frameborder="1"></iframe>
+</section>
 
 
   <!--- Footer ---------------------->

@@ -25,8 +25,12 @@ h3{
   font-weight: 300;
 }
 h4{
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 200;
+}
+h5{
+  font-size: 13px;
+  font-weight: 700;
 }
 span{
   font-size: 20px;
@@ -45,7 +49,7 @@ p{
   color: #777;
   font-size: 14px;
   font-weight: 300;
-  line-height: 22px;
+  margin: 0 0 -10px 0;
 }
 
 /*----- Button ----- */
@@ -401,23 +405,24 @@ nav label{display:none}
   }
   .pageheader-title-cards-wrapper {
     grid-template-columns: 1fr;
-    height: 10em;
+    height: auto;
     width: 100vw;
   }
   .pageheader-title-card {
     height: 10em;
     width: 100vw;
     margin-left: 0;
-    vertical-align: middle;
+    vertical-align: top;
   }
   .pageheader-title-txbx h3{
     font-size: 30px;
   }
   .pageheader-details-card {
-    height: 62vh;
+    height: auto;
     width: 100vw;
     margin-left: 0;
     display: inline-block;
+    vertical-align: bottom;
   }
   .pageheader-details-card h2{
     font-size: 16px;
@@ -430,6 +435,99 @@ nav label{display:none}
   }
 }
 
+/*----- Subpage ----- */
+.subpage{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 45px;
+  margin: 0 auto;
+  margin-top: -20vh;
+  margin-bottom: 10vh;
+  width: 75%;
+  height: auto;
+  position: relative;
+  box-shadow: 0 0 50px -10px black;
+  background-color: #ffffff;
+}
+.subpage h3{
+  font-size: 30px;
+}
+input[type='checkbox'] {
+  display: none;
+}
+.wrap-collabsible {
+  margin: 10px 0;
+}
+.toggle-label {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  padding: 1rem;
+  color: #ffffff;
+  background: #463357;
+  border-radius: 2px;
+  transition: all 0.25s ease-out;
+}
+.toggle-label::before {
+  content: ' ';
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+  transition: transform .2s ease-out;
+}
+.toggle:checked+.toggle-label::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+.collapsible-content {
+  height: 0px;
+  overflow: hidden;
+  transition: height .25s ease-in-out;
+}
+.toggle:checked + .toggle-label + .collapsible-content {
+  height: auto;
+}
+.collapsible-content .content-inner {
+  text-align: left;
+  background: #f1f1f1;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  padding: .5rem 1rem;
+}
+.collapsible-content p {
+   margin-bottom: 0;
+}
+.fig-horizontal {
+  display: block;
+}
+.fig-vertical {
+  display: none;
+}
+
+@media(min-width: 1600px){
+}
+@media(max-width: 700px){
+  .subpage{
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    width: 100vw;
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+  }
+  .fig-horizontal {
+    display:none;
+  }
+  .fig-vertical {
+    display: block;
+  }
+}
 
 /*------------------------ CARDS ------------------------*/
 /*--- Firstly, the cards are arranged in the grid defined in "cards-wrapper".
@@ -518,6 +616,7 @@ trajectory into the card margins, covering the card-before content.---*/
   color: #929292;
   width : 70%;
   padding: 10px;
+  text-overflow: ellipsis;
 }
 .card-after h5{
   position: absolute;
@@ -557,14 +656,15 @@ trajectory into the card margins, covering the card-before content.---*/
 @media(max-width: 700px){
   .cards-wrapper {
     grid-template-columns: 1fr;
-    padding: 5vw;
+    padding: 2vw;
     grid-gap: 10vw;
   }
   .card-grid-space .num {
     text-align: center;
   }
   .card {
-    height: 120vw;
+    height: 75vh;
+    width: 95vw;
     padding: 0;
   }
   .card-content{
@@ -584,6 +684,12 @@ trajectory into the card margins, covering the card-before content.---*/
 }
 
 /*------------------------ IFRAME ------------------------*/
+.iframe-wrapper-title {
+  visibility:hidden;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 15px;
+}
 .iframe-wrapper {
   display: block;
   justify-content: center;
@@ -593,14 +699,30 @@ trajectory into the card margins, covering the card-before content.---*/
   margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 90%;
   background-color: #224e6d00;
 }
 iframe{
   border: none;
-  height: 2000px;
+  height: 10000px;
   width:100%;
 }
+
+@media(min-width: 1600px){
+  .iframe-wrapper {
+    width: 70%;
+  }
+}
+
+@media(max-width: 700px){
+  .iframe-wrapper-title {
+    visibility:visible;
+  }
+  .iframe-wrapper{
+    display: none;
+  }
+}
+
 /*-------------------------------- RESOURCES ---------------------------------*/
 /*
 Fonts: https://fonts.google.com/
