@@ -504,7 +504,7 @@ input[type='checkbox'] {
    margin-bottom: 0;
 }
 .fig-horizontal {
-  display: block;
+  display: inline-block;
 }
 .fig-vertical {
   display: none;
@@ -525,7 +525,7 @@ input[type='checkbox'] {
     display:none;
   }
   .fig-vertical {
-    display: block;
+    display: inline-block;
   }
 }
 
