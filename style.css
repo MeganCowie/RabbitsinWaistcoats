@@ -435,8 +435,8 @@ nav label{display:none}
   }
 }
 
-/*----- Subpage ----- */
-.subpage{
+/*----- notepage ----- */
+.notepage{
   display: block;
   justify-content: center;
   align-items: center;
@@ -451,7 +451,7 @@ nav label{display:none}
   box-shadow: 0 0 50px -10px black;
   background-color: #ffffff;
 }
-.subpage h3{
+.notepage h3{
   font-size: 30px;
 }
 input[type='checkbox'] {
@@ -511,12 +511,28 @@ input[type='checkbox'] {
 }
 
 @media(min-width: 1600px){
+  .notepage{
+    width: 50%;
+  }
+}
+@media(max-width: 1300px){
+  .notepage{
+    width: 100%;
+  }
+}
+@media(max-width: 900px){
+  .fig-horizontal {
+    display:none;
+  }
+  .fig-vertical {
+    display: inline-block;
+  }
 }
 @media(max-width: 700px){
-  .subpage{
+  .notepage{
     margin-top: 0vh;
     margin-bottom: 0vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
     display: inline-block;
     padding: 5px;
@@ -680,6 +696,133 @@ trajectory into the card margins, covering the card-before content.---*/
     font-size: 12px;
     line-height: 18px;
     width: 70%;
+  }
+}
+
+/*------------------------ TILES ------------------------*/
+.tiles-wrapper {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  padding-bottom: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  background-color: #224e6d00;
+}
+.tile {
+  margin-top: 40px;
+  height: 14em;
+  width: 100%;
+  font-size: 1.5em;
+  color: white;
+  border-radius:10px;
+  padding: 0em;
+  display: flex;
+  transition: all, 1s;
+  overflow: hidden;
+  box-shadow: 0 0 10px -5px black;
+  position: relative;
+}
+.tile-image{
+  width: 40%;
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), var(--bg-img);
+  background-size: cover;
+  background-position: center;
+}
+.tile-text{
+  width: 60%;
+  padding: 20px;
+  color:#000000;
+}
+.tile-collapsible-indicator {
+  width: 10%;
+  height: 0px;
+  transition: height .25s ease-in-out;
+  text-align: center;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+.tile-collapsible-indicator p {
+  padding: 15px;
+  vertical-align: bottom;
+}
+.rating{
+  width:100%;
+  height:3em;
+  margin-top: 3em;
+}
+.rating h4{
+  margin-left:10%;
+  font-weight: 600;
+}
+.rating svg{
+  overflow:visible;
+  height: auto;
+}
+.tile:hover{
+  cursor: pointer;
+}
+.tile-toggle-label:hover .tile-collapsible-indicator{
+  height:100px;
+}
+.tile-toggle-label {
+  color: #ffffff;
+  background: #ffffff;
+  transition: all 0.25s ease-out;
+}
+.tile-collapsible-content {
+  height: 0px;
+  overflow: hidden;
+  transition: height .25s ease-in-out;
+}
+.tile-collapsible-content .tile-content-inner {
+  text-align: left;
+  background: #f1f1f1;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  padding: .5rem 1rem;
+}
+.tile-toggle:checked + .tile-toggle-label + .tile-collapsible-content {
+  height: auto;
+}
+
+@media(min-width: 1600px){
+}
+
+@media(max-width: 700px){
+  .tiles-wrapper {
+    padding: 2vw;
+    width: 100%;
+  }
+  .tile {
+    height: 25em;
+    width: 100%;
+    border-radius:10px;
+    padding: 0em;
+    display: block;
+    transition: all, 1s;
+    box-shadow: 0 0 10px -5px black;
+    position: relative;
+  }
+  .tile-image{
+    height:12.5em;
+    width:100%;
+  }
+  .tile-text{
+    width: 100%;
+    padding: 20px;
+    color:#000000;
+  }
+  .tile-text .rating{
+    margin-left:-8%;
+    margin-top: 1em;
+  }
+  .tile-collapsible-indicator {
+    width: 100%;
   }
 }
 

@@ -11,5 +11,3 @@ Mustache template system
 
 ### Widgets
 "Processing" language
-
-### Aquarium Project
