@@ -11,3 +11,6 @@ Mustache template system
 
 ### Widgets
 "Processing" language
+
+### Glitches
+Make responsive for ipad dimensions
