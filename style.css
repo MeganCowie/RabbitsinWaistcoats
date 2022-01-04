@@ -174,7 +174,7 @@ nav label{display:none}
     transition-timing-function: ease-in-out;
     }
   nav label {
-   color: white;
+   color: #ffffff;
    background:  none;
    font-style: normal;
    font-size: 1.2em;
@@ -193,7 +193,7 @@ nav label{display:none}
 .header {
   min-height: 70vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/RichieCrop.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/Photo_Header.jpg);
   background-position: bottom;
   background-size: cover;
   position: relative;
@@ -235,7 +235,7 @@ nav label{display:none}
 .subheader {
   min-height: 60vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/RichieCropShort.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/Photo_Subheader.jpg);
   background-position: bottom;
   background-size: cover;
   position: relative;
@@ -254,6 +254,7 @@ nav label{display:none}
 @media(max-width: 700px){
   .subheader {
     min-height: 10vh;
+    background-size: fill;
   }
 }
 
@@ -261,10 +262,11 @@ nav label{display:none}
 .footer {
   min-height: 50vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/RichieDaisyCrop.jpg);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/Photo_Footer.jpg);
   background-position: bottom;
   background-size: cover;
   position: relative;
+  margin-bottom: 0px;
 }
 .footer-links{
   position: absolute;
@@ -324,35 +326,32 @@ nav label{display:none}
   width: 90%;
   box-shadow: 0 0 50px -10px black;
   border-radius:10px;
+  overflow: hidden;
 }
 .pageheader-wrapper {
   margin-top: 40px;
   min-height: 14em;
   max-height: auto;
   width: 100%;
-  font-size: 1.5em;
   color: white;
   padding: 0em;
   display: flex;
-  transition: all, 1s;
   overflow: hidden;
   position: relative;
   border-radius:10px;
 }
-.pageheader-background {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position:absolute;
-  z-index:0;
-}
 .pageheader-title {
   width: 70%;
-  height: 100%;
+  box-sizing:border-box;
+  margin: 0;
+  vertical-align: middle;
   position: relative;
-  overflow:hidden;
-  padding: 1em;
-  margin-top: 4em;
+  padding: 0.5em;
+  padding-top: 7em;
+  background-color: var(--bg-color);
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), var(--bg-img);
+  background-size: fill;
+  background-position: center;
 }
 .pageheader-details {
   width: 30%;
@@ -363,14 +362,13 @@ nav label{display:none}
   align-items: left;
   position: relative;
   overflow: hidden;
-  background-color: var(--bg-color);
   padding: 0.5em;
+  background-color: var(--bg-color);
 }
 .pageheader-title h3{
   color: #ffffff;
   font-size: 60px;
   text-align: center;
-  z-index:1;
 }
 .pageheader-details h2{
   font-size: 20px;
@@ -395,24 +393,21 @@ nav label{display:none}
     border-radius:0px;
   }
   .pageheader-wrapper{
-    min-height: 0em;
     max-height: auto;
     display: block;
     border-radius:0px;
   }
   .pageheader-title {
     width: 100%;
-    margin-left: 0;
-    margin-top: 0;
+    padding:2em;
+    background-size: 50%;
+    padding-top: 2em;
   }
   .pageheader-title-txbx h3{
     font-size: 30px;
   }
   .pageheader-details {
     width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 0;
     display: inline-block;
   }
   .pageheader-title h3{
@@ -464,6 +459,9 @@ input[type='checkbox'] {
   background: #463357;
   border-radius: 2px;
   transition: all 0.25s ease-out;
+}
+.toggle-label:hover{
+  cursor: pointer;
 }
 .toggle-label::before {
   content: ' ';
@@ -673,23 +671,45 @@ trajectory into the card margins, covering the card-before content.---*/
     text-align: center;
   }
   .card {
-    height: 75vh;
+    height: 500px;
     width: 95vw;
     padding: 0;
   }
   .card-content{
-    padding: 2px;
+    padding: 1vw;
   }
   .card-after img{
     width: 70%;
   }
   .card-after h2{
-    font-size: 18px;
+    font-size: 15pt;
+  }
+  .card-after h5{
+    font-size: 10pt;
   }
   .card-after p{
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 10pt;
+    line-height: 12pt;
     width: 70%;
+  }
+  .card:onclick .card-after {
+    top: 0%;
+    left: 0%;
+    width: 140%;
+    height: 140%;
+    border-radius: 0% 0% 80% 0%;
+    opacity: 1;
+    transition: 0.7s;
+    transition-timing-function:cubic-bezier(0,0.1,0.5,1);
+  }
+  .card:not(onclick) .card-after {
+    top: -100%;
+    left:-100%;
+    width: 140%;
+    height: 140%;
+    height: 0;
+    opacity: 0;
+    transition: 1s;
   }
 }
 
@@ -764,7 +784,7 @@ trajectory into the card margins, covering the card-before content.---*/
   height:100px;
 }
 .tile-toggle-label {
-  color: #ffffff;
+  color: #000000;
   background: #ffffff;
   transition: all 0.25s ease-out;
 }
@@ -782,6 +802,10 @@ trajectory into the card margins, covering the card-before content.---*/
 }
 .tile-toggle:checked + .tile-toggle-label + .tile-collapsible-content {
   height: auto;
+}
+
+.tile-toggle-label::after .tile-collapsible-indicator{
+  height:200px;
 }
 
 @media(min-width: 1600px){
@@ -820,6 +844,7 @@ trajectory into the card margins, covering the card-before content.---*/
   }
   .tile-collapsible-indicator {
     width: 100%;
+    height: 100px;
   }
 }
 
